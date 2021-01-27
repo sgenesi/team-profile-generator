@@ -1,7 +1,5 @@
 const Manager = require('../lib/Manager');
 const Employee = require('../lib/Employee');
-const { expect, test } = require('@jest/globals');
-const { get } = require('http');
 
 test('gets office number', () => {
     const officeValue = 30;
