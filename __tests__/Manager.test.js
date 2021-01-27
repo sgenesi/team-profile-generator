@@ -1,7 +1,7 @@
 const Manager = require('../lib/Manager');
 const Employee = require('../lib/Employee');
 
-test('gets office number', () => {
+test('adds office number to Manager object', () => {
     const officeValue = 30;
     const employee = new Manager('Tom', 50, "email@email.com", officeValue);
     expect(employee.officeNumber).toBe(officeValue);

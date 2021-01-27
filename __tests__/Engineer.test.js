@@ -1,7 +1,7 @@
 const Engineer = require('../lib/Engineer');
 const Employee = require('../lib/Employee');
 
-test('gets GitHub username', () => {
+test('adds GitHub username to Engineer object', () => {
     const gitUserName = 'git';
     const employee = new Engineer('Bob', 60, "email@email.com", gitUserName);
     expect(employee.github).toBe(gitUserName);
@@ -15,6 +15,6 @@ test("getRole() should now return 'Engineer'", () => {
 
 test('get GitHub username using getGithub()', () => {
     const testUserName = 'git';
-    const employee = new Engineer('TBob', 60, "email@email.com", testUserName);
+    const employee = new Engineer('Bob', 60, "email@email.com", testUserName);
     expect(employee.getGithub()).toBe(testUserName);
 });
