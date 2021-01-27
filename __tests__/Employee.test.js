@@ -1,5 +1,3 @@
-const { tsThisType } = require('@babel/types');
-const { test, expect } = require('@jest/globals');
 const Employee = require('../lib/Employee');
 
 test('creates an employee object', () => {
@@ -43,7 +41,7 @@ test('get email using getEmail()', () => {
     expect(employee.getEmail()).toBe(testEmail);
 });
 
-test('get role using getRole()', () => {
+test("get role using getRole() and should return 'Employee'", () => {
     const testRole = "Employee";
     const employee = new Employee('Joe', 50, "email@email.com");
     expect(employee.getRole()).toBe(testRole);
