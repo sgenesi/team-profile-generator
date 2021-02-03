@@ -1,7 +1,6 @@
-# team-profile-generator
+# Team-Profile-Generator
 
-# portfolio-generator
-The Portfolio Generator is a command-line application that dynamically generates a professional portfolio from a user's input using the Inquirer package.  
+The Team Profile Generator is a CLI application that generates an HTML file of your team members that is website ready.
 
 Table of Contents
 * [User Story and Acceptance Criteria](#user-story-and-acceptance-criteria)
@@ -17,55 +16,86 @@ Table of Contents
 ### User Story
 
 ```
-AS A web developer who needs a professional portfolio
-I WANT to be able to enter my information to generate a portfolio
-SO THAT I can spend more time coding new projects.
+AS A manager
+I WANT to generate a webpage that displays my team's basic info
+SO THAT I have quick access to their emails and GitHub profiles
 ```
 
 ### Acceptance Criteria
 
 ```
-WHEN I open the project on GitHub
-THEN I can clone the code to my computer.
+GIVEN a command-line application that accepts user input
+WHEN I am prompted for my team members and their information
+THEN an HTML file is generated that displays a nicely formatted team roster based on user input
 ```
 ```
-WHEN I open the code on my computer
-THEN I can run the node app.
-```
-
-```
-WHEN I run the app
-THEN I can enter my information.
+WHEN I click on an email address in the HTML
+THEN my default email program opens and populates the TO field of the email with the address
 ```
 ```
-WHEN I open the page
-THEN I can see my professional portfolio.
+WHEN I start the application
+THEN I am prompted to enter the team manager’s name, employee ID, email address, and office number
+```
+```
+WHEN I enter the team manager’s name, employee ID, email address, and office number
+THEN I am presented with a menu with the option to add an engineer or an intern or to finish building my team
+```
+```
+WHEN I select the engineer option
+THEN I am prompted to enter the engineer’s name, ID, email, and GitHub username, and I am taken back to the menu
+```
+```
+WHEN I select the intern option
+THEN I am prompted to enter the intern’s name, ID, email, and school, and I am taken back to the menu
+```
+```
+WHEN I decide to finish building my team
+THEN I exit the application, and the HTML is generated
 ```
 
 ---
 ## Built With
+* Jest
 * Node.js
+* JavaScript
 * HTML
 * CSS
 
 ---
 ## Key Features
-* Allows user to input personal information and project information
-* Generates a professional portfolio
+* Runs in Node.js  
+* Uses Inquirer package
+* Uses Jest package for testing
+* Requests information from a user and then generates an HTML file displaying the information
 
 ---
 ## Links
-GitHub Repo: https://github.com/sgenesi/portfolio-generator
+* Walkthrough Video: https://drive.google.com/file/d/1vBzuVjCFRpLHs6ObPsp61M1BiWAWUUFU/view?usp=sharing 
+* GitHub Repo: https://github.com/sgenesi/team-profile-generator
 
 ---
 ## Images
 
-### VS Code Image
-![image](https://user-images.githubusercontent.com/71858457/104823411-18432100-5807-11eb-89ca-9e4b092a3bed.png)
+### Passed Tests 
 
-### Desktop Images of Generated Portfolio
-![image](https://user-images.githubusercontent.com/71858457/104823427-2bee8780-5807-11eb-9d61-08a7fca4a991.png)
+![image](https://user-images.githubusercontent.com/71858457/106820095-06031880-6638-11eb-81f6-747519038998.png)
 
-![image](https://user-images.githubusercontent.com/71858457/104823436-3ad53a00-5807-11eb-8886-9d26c2751776.png)
+### Desktop View
 
+1440px X 1112px
 
+![image](https://user-images.githubusercontent.com/71858457/106820134-12877100-6638-11eb-9fd9-156ef4252576.png)
+
+### iPad View
+
+768px X 1024px
+
+![image](https://user-images.githubusercontent.com/71858457/106820229-38147a80-6638-11eb-9d7f-1f215f97376f.png)
+
+### iPhone 6 View
+
+375px X 667px
+
+![image](https://user-images.githubusercontent.com/71858457/106820175-203cf680-6638-11eb-9331-895d74c015a3.png)
+
+![image](https://user-images.githubusercontent.com/71858457/106820206-2c28b880-6638-11eb-9ac1-970bf09b8e54.png)

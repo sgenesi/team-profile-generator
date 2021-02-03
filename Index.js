@@ -93,9 +93,9 @@ function startHtml() {
         </style>
     </head>
     <body>
-    <div class="jumbotron p-3 mb-2 bg-danger text-white text-center"><h1>My Team</h1></div>
-<div class="container">
-    <div class="row">`;
+    <div class="jumbotron p-3 mb-2 bg-danger text-white text-center">
+        <h1>My Team</h1>
+    </div>`;
     fs.writeFile("./dist/index.html", html, function (err) {
         if (err) {
             console.log(err);
@@ -113,49 +113,51 @@ function addHtml(member) {
         let data = "";
         if (role === "Engineer") {
             const github = member.getGithub();
-            data = `<div class="row">
-            <div class="col">
+            data = `<div class="col-md-6 col-lg-4">
             <div class="card">
                 <div class="card-header p-3 mb-2 bg-primary text-white">
                     <h2 class="card-header">${name}</h2>
-                    <h3><i class="fas fa-glasses"></i> Engineer</h3>
+                    <h3><i class="fas fa-glasses"></i>Engineer</h3>
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">ID: ${id}</li>
+                    <li class="list-group-item">Id: ${id}</li>
                     <li class="list-group-item">Email: ${email}</li>
                     <li class="list-group-item">GitHub: ${github}</li>
                 </ul>
-            </div>`;
+            </div>
+        </div>`;
         } else if (role === "Intern") {
             const school = member.getSchool();
-            data = `<div class="row">
-            <div class="col">
+            data = `<div class="col-md-6 col-lg-4">
             <div class="card">
                 <div class="card-header p-3 mb-2 bg-primary text-white">
                     <h2 class="card-header">${name}</h2>
-                    <h3><i class="fas fa-user-graduate"></i> Intern</h3>
+                    <h3><i class="fas fa-user-graduate"></i>Intern</h3>
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">ID: ${id}</li>
+                    <li class="list-group-item">Id: ${id}</li>
                     <li class="list-group-item">Email: ${email}</li>
                     <li class="list-group-item">School: ${school}</li>
                 </ul>
-            </div>`;
+            </div>
+        </div>`;
         } else {
             const officeNumber = member.getOfficeNumber();
-            data = `<div class="row">
-            <div class="col">
-            <div class="card">
-                <div class="card-header p-3 mb-2 bg-primary text-white">
-                    <h2 class="card-header">${name}</h2>
-                    <h3><i class="fas fa-mug-hot"></i> Manager</h3>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">ID: ${id}</li>
-                    <li class="list-group-item">Email: ${email}</li>
-                    <li class="list-group-item">Office Number: ${officeNumber}</li>
-                </ul>
-            </div>`
+            data = `<div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card">
+                        <div class="card-header p-3 mb-2 bg-primary text-white">
+                            <h2 class="card-header">${name}</h2>
+                            <h3><i class="fas fa-mug-hot"></i>Manager</h3>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Id: ${id}</li>
+                            <li class="list-group-item">Email: ${email}</li>
+                            <li class="list-group-item">Office Number: ${officeNumber}</li>
+                        </ul>
+                    </div>
+                </div>`
         }
         console.log("adding team member");
         fs.appendFile("./dist/index.html", data, function (err) {
