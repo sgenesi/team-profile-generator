@@ -4,10 +4,10 @@ The Team Profile Generator is a CLI application that generates an HTML file of y
 
 Table of Contents
 * [User Story and Acceptance Criteria](#user-story-and-acceptance-criteria)
-*[Built With](#built-with)
-*[Key Features](#key-features)
-*[Links](#links)
-*[Images](#images)
+* [Built With](#built-with)
+* [Key Features](#key-features)
+* [Links](#links)
+* [Images](#images)
 
 ---
 ## User Story and Acceptance Criteria
